@@ -15,6 +15,8 @@ matrix:
             - git
       script:
         - sudo pip3 install https://codeload.github.com/zaoqi/gitfs/tar.gz/master
+        - sudo mkdir /var/lib/gitfs
+        - sudo chmod 777 /var/lib/gitfs
         - mkdir mount
         - gitfs "$HTTPS_GIT_REPO" mount
         - ls mount
