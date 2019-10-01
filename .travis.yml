@@ -1,0 +1,17 @@
+language: bash
+matrix:
+  include:
+    - os: linux
+      dist: bionic
+      sudo: required
+      addons:
+        apt:
+          packages:
+            - python3-pip
+            - python3
+            - build-essential
+            - fuse
+            - git
+      script:
+        - sudo pip3 install https://codeload.github.com/zaoqi/gitfs/tar.gz/master
+        - git clone "$HTTPS_GIT_REPO"
