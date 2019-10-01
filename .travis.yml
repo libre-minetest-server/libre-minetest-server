@@ -15,4 +15,6 @@ matrix:
             - git
       script:
         - sudo pip3 install https://codeload.github.com/zaoqi/gitfs/tar.gz/master
-        - git clone "$HTTPS_GIT_REPO"
+        - mkdir mount
+        - gitfs "$HTTPS_GIT_REPO" mount
+        - ls mount
